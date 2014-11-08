@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="css\style.css">
 <body>
 	<header>
 		<h1>Stuff</h1>
@@ -31,7 +31,7 @@
 <script>
 	//Cancel click event
 	$('.loginButton').click(function(){
-		$( "#testid" ).load( "http://google.com/", function(responseTxt,statusTxt,xhr){
+		$( "#testid" ).load( "ajax\login.php", function(responseTxt,statusTxt,xhr){
 	    if(statusTxt=="success")
 	      alert("External content loaded successfully!");
 	    if(statusTxt=="error")
