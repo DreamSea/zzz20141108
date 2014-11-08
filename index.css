@@ -1,0 +1,23 @@
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    /*width:350px;*/
+    float:right;
+    padding:10px;	 	 
+}
+
+
+a { cursor: pointer; color: blue; }
+a:hover,a.hover { text-decoration: underline; }
