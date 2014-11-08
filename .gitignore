@@ -14,6 +14,20 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+# Eclipse Stuff
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.classpath
+.project
+
 # =========================
 # Operating System Files
 # =========================
@@ -41,3 +55,4 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+/build
