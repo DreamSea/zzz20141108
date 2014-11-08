@@ -5,7 +5,7 @@
  * Date: 11/8/14
  * Time: 1:23 PM
  */
-
+phpinfo();
 class model {
-
+    
 }
