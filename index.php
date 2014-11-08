@@ -31,7 +31,7 @@
 <script>
 	//Cancel click event
 	$('.loginButton').click(function(){
-		$( "#testid" ).load( "ajax\login.php", function(responseTxt,statusTxt,xhr){
+		$( "#testid" ).load( "ajax/login.php", function(responseTxt,statusTxt,xhr){
 	    if(statusTxt=="success")
 	      alert("External content loaded successfully!");
 	    if(statusTxt=="error")
