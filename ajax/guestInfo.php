@@ -191,7 +191,7 @@
 			<div class="parallax__layer parallax__layer--base">
 				<div class="parallax__title"> </div>
 				<div class="parallax__title">
-					<div id="finanQuote">'financial literacy is an essential skill for financial decision-making and wellbeing over the life cycle.'</div>
+					<div id="finanQuote">'Financial literacy is an essential skill for financial decision-making and wellbeing over the life cycle.'</div>
 					<br>
 					<div class="titleRegister">
 						<table>
