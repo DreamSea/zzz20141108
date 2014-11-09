@@ -5,6 +5,8 @@
 <title>Login Form</title>
 </head>
 <body>
+
+<div class="normalSection">
 	<div class="container">
 		<div class="main">
 			<form class="form" method="post" action="#">
@@ -17,7 +19,7 @@
 			</form>
 		</div>
 	</div>
-
+</div>
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script>

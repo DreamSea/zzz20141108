@@ -36,7 +36,7 @@
 
 		$('.logoutButton').click(function(){
 			$( "section" ).load( "ajax/guestInfo.php");
-			$( "nav").load( "ajax/guestNav.php");
+			$( "#navContent").load( "ajax/guestNav.php");
 			alert("Logged Out");
 		});
 

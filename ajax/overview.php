@@ -4,6 +4,8 @@
     <title>User Overview</title>
 </head>
 <body>
+
+<div class="normalSection">
     <div id="weekly">
 
     </div>
@@ -14,5 +16,6 @@
 
     </div>
     PI CHARTS
+    </div>
 </body>
 </html>

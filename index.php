@@ -2,12 +2,14 @@
 <html>
 <link rel="stylesheet" href="css\style.css">
 <body>
-	<header>
+<nav>
+	<div id="navTitle">
 		<h1>Budget Pi</h1>
-	</header>
+	</div>
+	<div id="navContent">
 
-	<nav>
-	</nav>
+	</div>
+</nav>
 
 	<section>
 	</section>
@@ -16,7 +18,7 @@
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
-	$( "nav" ).load( "ajax/guestNav.php");
+	$( "#navContent" ).load( "ajax/guestNav.php");
 	$( "section" ).load( "ajax/guestInfo.php");
 </script>
 </html>

@@ -1,38 +1,41 @@
 body,html{
-    height:100%;
+    height:100vh;
 }
 
 * {
     margin: 0;
 }
 
-header {
+nav {
+    float: left;
+}
+
+#navTitle {
     background-color:black;
     color:white;
-    height: 20%;
+    height: 20vh;
+    width:200px;
     padding:0;
-    position: relative
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 
-header h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-nav {
+#navContent {
     line-height:30px;
     background-color:#eeeeee;
-    height:80%;
+    height:75vh;
     width:200px;
-    float:left;
     text-align: center;
-    padding:50px 0px 0px 0px;
+    padding:5vh 0 0 0;
 }
 
 section {
-    padding:50px 0px 0px 250px;
+    height:100vh;
+}
+
+.normalSection {
+    padding:5vh 0 0 250px;
 }
 
 

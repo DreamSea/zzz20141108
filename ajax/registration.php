@@ -5,6 +5,8 @@
 	<title>Registration Form</title>
 </head>
 <body>
+
+<div class="normalSection">
 	<div class="divLogin">
 		<div class="main">
 			<form class="form" method="post" action="#">
@@ -21,7 +23,7 @@
 	</div>
 	<br>
 	<a class="secretButton">Fake Login</a>
-
+</div>
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script>
@@ -50,7 +52,7 @@
 			});
 		});
 		$('.secretButton').click(function(){
-			$( "nav" ).load( "ajax/userNav.php" );
+			$( "#navContent" ).load( "ajax/userNav.php" );
 			$( "section" ).load( "ajax/overview.php" );
 		});
 

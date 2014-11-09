@@ -4,6 +4,7 @@
 <title>Input Form</title>
 </head>
 <body>
+	<div class="normalSection">
 	<div class="container">
 		<div class="main">
 			<form class="form" method="post" action="#">
@@ -22,6 +23,7 @@
 				<input type="button" name="submit" id="submit" value="Submit">
 			</form>
 		</div>
+	</div>
 	</div>
 
 	<script
