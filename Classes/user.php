@@ -59,6 +59,9 @@ class user {
         else
         {
             $registerQuery = array("user" => $user, "pass" => $passHash, "email"=>$email);
+            $registerCursor = $this->userCollection->insert($registerQuery);
+            $this->data = $registerQuery;
+            return 0;
         }
     }
 }

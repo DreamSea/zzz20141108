@@ -10,7 +10,7 @@ ini_set('display_errors', 'On');
 include "Classes/user.php";
 
 $user = new user();
-$retVal = $user->userLogin("elernisto@gmail.com", "kanash1d0!");
+$retVal = $user->registerUser("bla2", "bla2", "elernisto@gmail.com");
 if($retVal == 0)
 {
     echo "Works!";
