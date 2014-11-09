@@ -20,6 +20,7 @@ if(!isset($_SESSION['loggedin'])) {
     $_SESSION['mobile'] = False;
     $_SESSION['username'] = "";
 }
+
     /*
      * This handles the user log in. */
     function authenticateUser() {
@@ -28,13 +29,12 @@ if(!isset($_SESSION['loggedin'])) {
         $enteredPass = $_POST('password');
         if(empty($enteredName) ||empty($enteredPass) ) {
             // Should probably send an error.
-            alert("One of the fields has been left blank.")
             return False;
         }
         if(!userLogin($enteredName,$enteredPass) == 0 ) {
             return False;
         }
-        loadSession($email);
+        loadSession($enteredName);
         return True;
     }
 
@@ -54,7 +54,7 @@ if(!isset($_SESSION['loggedin'])) {
             return false;
         }
 
-        if(enteredPass != confirmPass) {
+        if($enteredPass != $confirmPass) {
             return False;
         }
 
@@ -80,11 +80,9 @@ if(!isset($_SESSION['loggedin'])) {
         $_SESSION['username'] = $user;
         //get_browser($userstring);
         // $_SESSION['mobile'] = // get user agent string and compare it to somestuff.
-        */
         // check if it's a
+        return True;
     }
-
-
 
     /*
      * Ends the session for the user.
@@ -93,6 +91,4 @@ if(!isset($_SESSION['loggedin'])) {
         $_SESSION['loggedin'] = False;
         $_SESSION['username'] = "";
     }
-
-
 ?>

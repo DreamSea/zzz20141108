@@ -1,7 +1,7 @@
 
 <!-- modified from the sample pieChart file from the chart.js documentation. -->
 <?php
-include "input.php";
+include "./input.php";
 ?>
 
 <!DOCTYPE html>

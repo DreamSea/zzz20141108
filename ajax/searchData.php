@@ -7,7 +7,7 @@
 
 <div class="normalSection">
     <div class="sectionContainer">
-        <form class="form" method="post" action="#">
+        <form class="form" method="post" action="../Controllers/searchAction.php">
             <h2>Search Data</h2><br>
             <table>
                 <tr>

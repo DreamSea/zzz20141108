@@ -7,15 +7,15 @@
  *
  * This controls the various functions, it is what will direct the displaying of the charts and what not.
  */
-include("../Classes/budget.php");
+include("../Classes/budgetfunctions.php");
   /*
    */
   function data_input() {
       $category = $_POST("category");
       $totalCost = $_POST("totalCost");
-      $startDate = $_POST("startDate");j
+      $startDate = $_POST("startDate");
       $endDate = $_POST("endDate");
-      if(empty($category) || empty($totalCost) || empty(startDate) || empty(endDate)) {
+      if(empty($category) || empty($totalCost) || empty($startDate) || empty($endDate)) {
           // Error, some fields were left blank.
           return False;
       }
@@ -30,16 +30,18 @@ include("../Classes/budget.php");
   function  generateChartData($budget) {
       // budget get, needs to be implemented in model.
       // Select this budget
-      selectBudget($_SESSION['currentuser']);
-      $categories = listBudgetItems();
-      $count = count($categories);
+      $budget = new budget();
       // calculate what free percentage it will be.
       $freepercent = 1 - countCategoryPercentages();
+      $budget.newBudgetItem($freepercent, "#006660","Unused Money","#ffffff");
+      $categories = $budget.listCategories();
+      $count = count($categories);
       for($i = 0; $i < $count; $i++) {
-          // data_transform($currentValue,$currentColor,$currentLabel);
+          data_transform($categories[$i]["percent"],$categories[$i]["category"],$categories[$i]["color"]);
+          if($i + 1 < $count) {
+              echo ',\n';
+          }
       }
-
-
   }
   /*
    * Transforms the four values into a data entry for the pie chart.

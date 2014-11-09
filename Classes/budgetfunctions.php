@@ -5,7 +5,7 @@
  * Date: 11/8/14
  * Time: 11:59 PM
  */
-include "budget.php";
+require_once "./budget.php";
     /*
      * selectBudget
      */
@@ -43,6 +43,7 @@ include "budget.php";
 
 
     function newCategory() {
+        $budget = new budget();
         $enteredCategory = $_POST("category");
         $enteredPercent =  $_POST("percent");
         $enteredColor = $_POST("color");
@@ -63,6 +64,5 @@ include "budget.php";
         $enteredCategory = $_POST("category");
         $startDate = $_POST("startDate");
         $endDate = $_POST("endDate");
-
     }
 ?>
