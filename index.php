@@ -7,7 +7,9 @@
 	</header>
 
 	<nav>
-		<a class="loginButton">Login/Registration</a><br> More Stuff<br>
+		<a class="infoButton">Info</a><br>
+		<a class="loginButton">Login/Registration</a><br>
+		More Stuff<br>
 	</nav>
 
 	<div class="whatisthis">
@@ -29,7 +31,10 @@
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
-	//Cancel click event
+	$('.infoButton').click(function(){
+		alert("info load() placeholder");
+	});
+
 	$('.loginButton').click(function(){
 		$( "#testid" ).load( "ajax/login.php", function(responseTxt,statusTxt,xhr){
 	    if(statusTxt=="success")

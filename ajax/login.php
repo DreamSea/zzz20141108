@@ -9,33 +9,26 @@
 <script>
 $(document).ready(function(){
 	$("#register").click(function(){
-		alert("test");
+		alert("test "+$('input[type="text"]').css("border"));
+		<!--alert($('input[type="text"])');-->
 	});
 	$("#login").click(function(){
 		var email = $("#email").val();
 		var password = $("#password").val();
 		// Checking for blank fields.
 		if( email =='' || password ==''){
-			$('input[type="text"],input[type="password"]').css("border","2px solid red");
-			$('input[type="text"],input[type="password"]').css("box-shadow","0 0 3px red");
 			alert("Please fill all fields.");
 		} else {
 			$.post("login.php",{ email1: email, password1:password}, function(data){
 				if(data=='Bad Email') {
-					$('input[type="text"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
-					$('input[type="password"]').css({"border":"2px solid #00F5FF","box-shadow":"0 0 5px #00F5FF"});
 					alert("Bad Email");
 				} else if (data=='Bad Email/Password Combination'){
-					$('input[type="text"],input[type="password"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
 					alert("Bad Combination");
 				} else if (data=='Success'){
 					$("form")[0].reset();
-					$('input[type="text"],input[type="password"]').css({"border":"2px solid #00F5FF","box-shadow":"0 0 5px #00F5FF"});
 					alert("Success");
 				} else {
 					alert("Not Connected?");
-					$('input[type="text"],input[type="password"]').css({"border":"2px solid #000000","box-shadow":"none"});
-					<!--$('input[type="text"],input[type="password"]').css("border":"medium none color", "box-shadow":"none");-->
 				}
 			});
 		}

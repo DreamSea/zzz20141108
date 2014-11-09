@@ -1,16 +1,31 @@
+body,html{
+   height:100%;
+}
+
+* {  
+    margin: 0;  
+    padding: 0 auto;  
+}
+
 header {
+    text-align: center;
     background-color:black;
     color:white;
-    text-align:center;
-    padding:5px;	 
+    min-height:20%;
 }
+
+header h1 {
+	padding: 3%;
+    vertical-align: middle;
+}
+
 nav {
     line-height:30px;
     background-color:#eeeeee;
-    height:300px;
+    min-height:80%;
     width:200px;
     float:left;
-    padding:5px;	      
+    text-align: center; 
 }
 section {
     /*width:350px;*/
@@ -21,3 +36,8 @@ section {
 
 a { cursor: pointer; color: blue; }
 a:hover,a.hover { text-decoration: underline; }
+
+h2{
+text-align: center;
+font-size: 24px;
+}
