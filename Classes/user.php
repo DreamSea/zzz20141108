@@ -27,9 +27,16 @@ class user {
         $passHash = hash("sha256", $pass);
         $userQuery = array("user" => $name, "pass" => $passHash);
         $Cursor = $this->userCollection->find($userQuery);
+        $emailQuery = array("email" => $name, "pass"=>$passHash);
+        $emailCursor = $this->userCollection->find($emailQuery);
         if($Cursor->hasNext())
         {
             $this->data = $Cursor->getNext();
+            return 0;
+        }
+        else if($emailCursor->hasNext())
+        {
+            $this->data = $emailCursor->getNext();
             return 0;
         }
         else{
@@ -37,4 +44,5 @@ class user {
         }
 
     }
+    function getData(){return $this->data;}
 }
