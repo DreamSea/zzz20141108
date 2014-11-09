@@ -6,25 +6,31 @@
 <body>
 
 <div class="normalSection">
-<div class="container">
-    <div class="main">
+    <div class="sectionContainer">
         <form class="form" method="post" action="#">
-            <h2>Search Data</h2>
-
-            Category:
-            <input type="text" name="category" id="category"><br>
-            Start Date:
-            <input type="date" id="startDate" name="startDate"><br>
-            End Date:
-            <input type="date" id="endDate" name="endDate"><br>
-            <input type="button" name="submit" id="submit" value="Submit">
+            <h2>Search Data</h2><br>
+            <table>
+                <tr>
+                    <th class="inputDesc">Category</th>
+                    <td><input class = "inputField" type="text" name="category" id="category"></td>
+                </tr>
+                <tr>
+                    <th class="inputDesc">Start Date</th>
+                    <td><input type="date" id="startDate" name="startDate"></td>
+                </tr>
+                <tr>
+                    <th class="inputDesc">End Date</th>
+                    <td><input type="date" id="endDate" name="endDate"></td>
+                </tr>
+            </table><br>
+            <div class = "formButton"><input type="button" name="submit" id="submit" value="Submit"></div>
         </form>
     </div>
-    <br><br>
+    <br>
+
     <div id="results">
     </div>
 </div>
-    </div>
 
 <script
     src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

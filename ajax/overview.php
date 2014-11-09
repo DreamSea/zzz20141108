@@ -6,16 +6,17 @@
 <body>
 
 <div class="normalSection">
-    <div id="weekly">
+    <div class="sectionContainer" id="weeklyChart">
+        <h2>WEEKLY CHARTS \o/</h2>
+    </div><br>
 
-    </div>
-    <div id="monthly">
+    <div class="sectionContainer" id="monthlyChart">
+        <h2>MONTHLY CHARTS \o/</h2>
+    </div><br>
 
+    <div class="sectionContainer" id="yearly">
+        <h2>YEARLY CHARTS \o/</h2>
     </div>
-    <div id="yearly">
-
-    </div>
-    PI CHARTS
-    </div>
+</div>
 </body>
 </html>

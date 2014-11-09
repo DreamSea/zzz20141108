@@ -4,27 +4,36 @@
 <title>Input Form</title>
 </head>
 <body>
-	<div class="normalSection">
-	<div class="container">
-		<div class="main">
-			<form class="form" method="post" action="#">
-				<h2>Add Data</h2>
-				
-				Category:
-				<input type="text" name="category" id="category"><br>
-				Description:
-				<input type="text" name="description" id="description"><br>
-				Total Cost:
-				<input type="number" name="totalCost" id="totalCost"><br>
-				Start Date: 
-				<input type="date" id="startDate" name="startDate"><br>
-				End Date: 
-				<input type="date" id="endDate" name="endDate"><br>
-				<input type="button" name="submit" id="submit" value="Submit">
-			</form>
-		</div>
+<div class="normalSection">
+	<div class="sectionContainer">
+		<form class="form" method="post" action="#">
+			<h2>Add Data</h2><br>
+			<table>
+				<tr>
+					<th class="inputDesc">Category</th>
+					<td><input class = "inputField" type="text" name="category" id="category"></td>
+				</tr>
+				<tr>
+					<th class="inputDesc">Description</th>
+					<td><input class = "inputField" type="text" name="description" id="description"></td>
+				</tr>
+				<tr>
+					<th class="inputDesc">Total Cost</th>
+					<td><input class = "number" type="text" name="totalCost" id="totalCost"></td>
+				</tr>
+				<tr>
+					<th class="inputDesc">Start Date</th>
+					<td><input type="date" id="startDate" name="startDate"></td>
+				</tr>
+				<tr>
+					<th class="inputDesc">End Date</th>
+					<td><input type="date" id="endDate" name="endDate"></td>
+				</tr>
+			</table><br>
+			<div class = "formButton"><input type="button" name="submit" id="submit" value="Submit"></div>
+		</form>
 	</div>
-	</div>
+</div>
 
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -56,6 +65,7 @@
 				}
 				else
 				{
+					alert("First Input Check Passed");
 					$.post("addData.php",{}, function(data){
 						if ( data === true )
 						{

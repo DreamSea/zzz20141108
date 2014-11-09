@@ -7,22 +7,28 @@
 <body>
 
 <div class="normalSection">
-	<div class="divLogin">
-		<div class="main">
-			<form class="form" method="post" action="#">
-				<h2>Registration Form</h2>
-				<label>Email: </label>
-				<input type="text" name="email" id="email"><br>
-				<label>Password: </label>
-				<input type="password" name="password" id="password"><br>
-				<label>Username: </label>
-				<input type="text" name="username" id="username"><br>
-				<input type="button" name="register" id="register" value="Register">
-			</form>
-		</div>
+	<div class="sectionContainer">
+		<form class="form" method="post" action="#">
+			<h2>Registration Form</h2><br>
+			<table>
+				<tr>
+					<th class="inputDesc">Username</th>
+					<td><input class = "inputField" type="text" name="username" id="username"></td>
+				</tr>
+				<tr>
+					<th class="inputDesc">Email</th>
+					<td><input class = "inputField" type="text" name="email" id="email"></td>
+				</tr>
+				<tr>
+					<th class="inputDesc">Password</th>
+					<td><input class = "inputField" type="text" name="password" id="password"></td>
+				</tr>
+			</table><br>
+			<div class = "formButton"><input type="button" name="register" id="register" value="Register"></div>
+		</form>
 	</div>
 	<br>
-	<a class="secretButton">Fake Login</a>
+	<a class="secretButton">How Mysterious</a>
 </div>
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -36,6 +42,7 @@
 				if( email =='' || password =='' || username ==''){
 					alert("Please fill all fields.");
 				} else {
+					alert("First Input Check Passed");
 					$.post("registration.php",{ email1: email, password1:password, username1: username}, function(data){
 						if(data=='Username Taken') {
 							alert("Username Taken");

@@ -81,7 +81,7 @@
 			font-size : 80 %;
 			margin-left: auto;
 			margin-right: auto;
-			width: 6em
+			width: 8em
 		}
 
 		.shiftLeftUp {
@@ -190,7 +190,7 @@
 		<div id="group4" class="parallax__group">
 			<div class="parallax__layer parallax__layer--base">
 				<div class="parallax__title">
-					<div class="shiftRightDown">carried over a balance and was charged interest</div>
+					<div class="shiftRightDown">carried over a credit balance and was charged interest</div>
 				</div>
 			</div>
 			<div class="parallax__layer parallax__layer--deep">
