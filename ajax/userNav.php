@@ -4,7 +4,7 @@
 	<title>User Navigation</title>
 </head>
 <body>
-	Username: <br>
+	Username: <label id="user"><label><br>
 	<a class="overviewButton">Overview</a><br>
 	<a class="addDataButton">Add Data</a><br>
 	<a class="loanButton">Loan Calculator</a><br>
@@ -14,6 +14,9 @@
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
+
+	var username = "username placeholder";
+	$("#user").attr("value", username);
 	$('.overviewButton').click(function(){
 		alert("overview load() placeholder");
 	});
