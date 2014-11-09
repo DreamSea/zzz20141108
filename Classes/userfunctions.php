@@ -18,7 +18,7 @@ session_set_cooki_params(0);
 if(!isset($_SESSION['loggedin'])) {
     $_SESSION['loggedin'] = False;
     $_SESSION['mobile'] = False;
-    $_SESSION['name'];
+    $_SESSION['username'] = "";
 }
     /*
      * This handles the user log in. */
@@ -31,10 +31,11 @@ if(!isset($_SESSION['loggedin'])) {
             alert("One of the fields has been left blank.")
             return False;
         }
-        if(!userLogin($enteredName,$enteredPass) ) {
+        if(!userLogin($enteredName,$enteredPass) == 0 ) {
             return False;
         }
-        loadSession();
+        loadSession($email);
+        return True;
     }
 
 
@@ -44,7 +45,7 @@ if(!isset($_SESSION['loggedin'])) {
     function register() {
         $enteredName = $_POST('name');
         $enteredMail = $_POST('email');
-        $enteredPass = $_POST('password1');
+        $enteredPass = $_POST('password');
         $confirmPass = $_POST('confirm');
 
         // check if everything is valid
@@ -70,18 +71,15 @@ if(!isset($_SESSION['loggedin'])) {
         endSession();
         // display sign in page.
     }
-u
     /*
      * Loads the next pages for the user.
      */
-    function loadSession() {
+    function loadSession($user) {
         // Set user to be logged in.
         $_SESSION['loggedin'] = True;
-        /*
-        $_SESSION['name']= getUserData;
-        $_SESSION['email'] = getUserDataEmail
-        get_browser($userstring);
-        $_SESSION['mobile'] = // get user agent string and compare it to somestuff.
+        $_SESSION['username'] = $user;
+        //get_browser($userstring);
+        // $_SESSION['mobile'] = // get user agent string and compare it to somestuff.
         */
         // check if it's a
     }
@@ -93,7 +91,7 @@ u
      */
     function endSession() {
         $_SESSION['loggedin'] = False;
-        echo
+        $_SESSION['username'] = "";
     }
 
 
