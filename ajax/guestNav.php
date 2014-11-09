@@ -4,22 +4,24 @@
     <title>Guest Navigation</title>
 </head>
 <body>
-    <a class="infoButton">Info</a><br>
-    <a class="loginButton">Login</a><br>
-    <a class="registrationButton">Registration</a>
+    <table class="hoverTable">
+        <tr id="trInfo"><th>Info</th></tr>
+        <tr id="trLogin"><th>Login</th></tr>
+        <tr id="trRegistration"><th>Registration</th></tr>
+    </table>
 
     <script
         src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
-        $('.infoButton').click(function(){
+        $('#trInfo').click(function(){
             $( "section" ).load( "ajax/guestInfo.php");
-        });
+        })
 
-        $('.loginButton').click(function(){
+        $('#trLogin').click(function(){
             $( "section" ).load( "ajax/login.php");
         });
 
-        $('.registrationButton').click(function(){
+        $('#trRegistration').click(function(){
             $( "section" ).load( "ajax/registration.php");
         });
     </script>

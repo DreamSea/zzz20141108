@@ -6,43 +6,39 @@
 <body>
 	Username: <br>
 	<label id="user"></label><br><br>
-	<a class="overviewButton">Overview</a><br>
-	<a class="searchDataButton">Search</a><br>
-	<a class="addDataButton">Add Data</a><br>
-	<a class="loanButton">Loan Calculator</a><br>
-	<a class="logoutButton">Logout</a><br>
 
+	<table class="hoverTable">
+		<tr id="trOverview"><th>Overview</th></tr>
+		<tr id="trSearch"><th>Search</th></tr>
+		<tr id="trAdd"><th>Add Data</th></tr>
+		<tr id="trLoan"><th>Loan Calculator</th></tr>
+		<tr id="trLogout"><th>Logout</th></tr>
+	</table>
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script>
-
-		var username = "username placeholder";
+		var username = "username";
 		$("#user").text(username);
-		$('.overviewButton').click(function(){
+		$('#trOverview').click(function(){
 			$( "section").load( "ajax/overview.php");
 		});
 
-		$('.searchDataButton').click(function(){
+		$('#trSearch').click(function(){
 			$( "section" ).load( "ajax/searchData.php");
 		});
 
-		$('.addDataButton').click(function(){
+		$('#trAdd').click(function(){
 			$( "section" ).load( "ajax/addData.php");
 		});
 
-		$('.loanButton').click(function(){
+		$('#trLoan').click(function(){
 			alert("loan load() placeholder");
 		});
 
-		$('.logoutButton').click(function(){
+		$('#trLogout').click(function(){
 			$( "section" ).load( "ajax/guestInfo.php");
 			$( "#navContent").load( "ajax/guestNav.php");
 			alert("Logged Out");
-		});
-
-		// Hover shim for Internet Explorer 6 and Internet Explorer 7.
-		$(document.body).on('hover','a',function(){
-			$(this).toggleClass('hover');
 		});
 	</script>
 </body>
