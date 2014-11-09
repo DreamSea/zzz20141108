@@ -14,11 +14,11 @@ session_start();
 
 // Does not automatically log the user in. It only keeps track of if the user
 // is currently logged in.
-session_set_cooki_params(0);
+session_set_cookie_params(0);
 if(!isset($_SESSION['loggedin'])) {
     $_SESSION['loggedin'] = False;
     $_SESSION['mobile'] = False;
-    $_SESSION['name'];
+    $_SESSION['name'] = "";
 }
     /*
      * This handles the user log in. */
@@ -28,13 +28,12 @@ if(!isset($_SESSION['loggedin'])) {
         $enteredPass = $_POST('password');
         if(empty($enteredName) ||empty($enteredPass) ) {
             // Should probably send an error.
-            alert("One of the fields has been left blank.")
             return False;
         }
         if(!userLogin($enteredName,$enteredPass) ) {
             return False;
         }
-        loadSession();
+        loadSession($enteredName);
     }
 
 
@@ -53,12 +52,12 @@ if(!isset($_SESSION['loggedin'])) {
             return false;
         }
 
-        if(enteredPass != confirmPass) {
+        if($enteredPass != $confirmPass) {
             return False;
         }
 
         registerUser($enteredName,$enteredPass,$enteredMail);
-        loadSession();
+        loadSession($enteredName);
         return True;
     }
 
@@ -70,13 +69,13 @@ if(!isset($_SESSION['loggedin'])) {
         endSession();
         // display sign in page.
     }
-u
     /*
      * Loads the next pages for the user.
      */
-    function loadSession() {
+    function loadSession($name) {
         // Set user to be logged in.
         $_SESSION['loggedin'] = True;
+        $_SESSION['username'] = $name;
         /*
         $_SESSION['name']= getUserData;
         $_SESSION['email'] = getUserDataEmail
@@ -93,7 +92,6 @@ u
      */
     function endSession() {
         $_SESSION['loggedin'] = False;
-        echo
     }
 
 
