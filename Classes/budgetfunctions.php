@@ -14,7 +14,8 @@ include "budget.php";
         $enteredBudget = $_POST("budget");
 
         if(empty($enteredUser) || empty($enteredBudget)) {
-            return False; }
+            return False;
+        }
 
         if(!(is_numeric($enteredBudget))) {
             return False;
