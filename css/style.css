@@ -3,19 +3,18 @@ body,html{
 }
 
 * {  
-    margin: 0;  
-    padding: 0 auto;  
+    margin: 0;
 }
 
 header {
     text-align: center;
     background-color:black;
     color:white;
-    min-height:20%;
+    max-height: 20%;
+    padding:0;
 }
 
 header h1 {
-	padding: 3%;
     vertical-align: middle;
 }
 
@@ -25,19 +24,14 @@ nav {
     min-height:80%;
     width:200px;
     float:left;
-    text-align: center; 
+    text-align: center;
+    padding:50px 0px 0px 0px;
 }
+
 section {
-    /*width:350px;*/
-    float:right;
-    padding:10px;	 	 
+    padding:50px 0px 0px 50px;
 }
 
 
 a { cursor: pointer; color: blue; }
 a:hover,a.hover { text-decoration: underline; }
-
-h2{
-text-align: center;
-font-size: 24px;
-}

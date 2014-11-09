@@ -31,22 +31,27 @@ $(document).ready(function(){
 		}
 	});
 });
+$('.secretButton').click(function(){
+	$( "nav" ).load( "ajax/userNav" );
+	$( "section" ).load( "ajax/overview.php" );
+});
 </script>
 </head>
 <body>
-	<div class="container">
+	<div class="divLogin">
 		<div class="main">
 			<form class="form" method="post" action="#">
-				<h2>Login Form</h2>
-				<label>Username: </label>
-				<input type="text" name="username" id="username"><br>
-				<label>Password: </label>
-				<input type="password" name="password" id="password"><br>
+				<h2>Registration Form</h2>
 				<label>Email: </label>
 				<input type="text" name="email" id="email"><br>
+				<label>Password: </label>
+				<input type="password" name="password" id="password"><br>
+				<label>Username: </label>
+				<input type="text" name="username" id="username"><br>
 				<input type="button" name="register" id="register" value="Register">
 			</form>
 		</div>
 	</div>
+	<a class="secretButton">Fake Login</a>
 </body>
 </html>
