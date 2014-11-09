@@ -11,6 +11,8 @@
 				
 				Category:
 				<input type="text" name="category" id="category"><br>
+				Description:
+				<input type="text" name="description" id="description"><br>
 				Total Cost:
 				<input type="number" name="totalCost" id="totalCost"><br>
 				Start Date: 
@@ -23,7 +25,7 @@
 	</div>
 
 	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
 

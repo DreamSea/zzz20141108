@@ -23,7 +23,7 @@
 	<a class="secretButton">Fake Login</a>
 
 	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			$("#register").click(function(){

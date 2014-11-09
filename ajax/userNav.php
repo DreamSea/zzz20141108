@@ -7,6 +7,7 @@
 	Username: <br>
 	<label id="user"></label><br><br>
 	<a class="overviewButton">Overview</a><br>
+	<a class="searchDataButton">Search</a><br>
 	<a class="addDataButton">Add Data</a><br>
 	<a class="loanButton">Loan Calculator</a><br>
 	<a class="logoutButton">Logout</a><br>
@@ -19,6 +20,10 @@
 		$("#user").text(username);
 		$('.overviewButton').click(function(){
 			$( "section").load( "ajax/overview.php");
+		});
+
+		$('.searchDataButton').click(function(){
+			$( "section" ).load( "ajax/searchData.php");
 		});
 
 		$('.addDataButton').click(function(){
