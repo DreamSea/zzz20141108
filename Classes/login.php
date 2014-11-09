@@ -9,6 +9,17 @@
 // include the user class
 require "user.php";
 
+// Start the session
+session_start();
+
+// Does not automatically log the user in. It only keeps track of if the user
+// is currently logged in.
+session_set_cooki_params(0);
+if(!isset($_SESSION['loggedin'])) {
+    $_SESSION['loggedin'] = False;
+    $_SESSION['mobile'] = False;
+    $_SESSION['name'];
+}
     /*
      * This handles the user log in. */
     function authenticateUser() {
@@ -17,52 +28,73 @@ require "user.php";
         $enteredPass = $_POST('password');
         if(empty($enteredName) ||empty($enteredPass) ) {
             // Should probably send an error.
-            alert()
-
+            alert("One of the fields has been left blank.")
             return False;
         }
-        if((strpos($enteredName,"@") === False)) {
-            // user has not entered a password.
-            // error handling.
+        if(!userLogin($enteredName,$enteredPass) ) {
             return False;
         }
-        return userLogin($enteredName,$enteredPass);
+        loadSession();
     }
 
-    /*
-     * Adds a user to the database
+
+    /*$
+     * Registers a user for this service.
      */
-    function signup() {
-        // ensure the password and password confirmation are equal to each other.
-        $enteredName = $_POST('email');
-        $enteredPass1 = $_POST('password1');
-        $enteredPass2 = $_POST('password2');
-        // check that passwords are the same.
-        if(!($enteredPass1 === $enteredPass2)) {
-            // Should show an error.
+    function register() {
+        $enteredName = $_POST('name');
+        $enteredMail = $_POST('email');
+        $enteredPass = $_POST('password1');
+        $confirmPass = $_POST('confirm');
+
+        // check if everything is valid
+        if(strpos($enteredMail,'@') === False) {
+            // display an error.
+            return false;
+        }
+
+        if(enteredPass != confirmPass) {
             return False;
         }
-        if(!(strpos($enteredName,'@') === False)) {
-            // Should tell user that email was wrong
-            // Should also check that it's a valid domain.
-            return False;
-        }
-        // create the user.
-        return true;
+
+        registerUser($enteredName,$enteredPass,$enteredMail);
+        loadSession();
+        return True;
     }
 
-    /*
-     * Starts the session for the user
-     */
-    function startSession() {
-        // Not sure how do do this
-    }
 
     /*
      * Logs a user out of their session.
      */
-    function signout() {
-        // Also not sure how to do this.
+    function logout() {
+        endSession();
+        // display sign in page.
     }
+u
+    /*
+     * Loads the next pages for the user.
+     */
+    function loadSession() {
+        // Set user to be logged in.
+        $_SESSION['loggedin'] = True;
+        /*
+        $_SESSION['name']= getUserData;
+        $_SESSION['email'] = getUserDataEmail
+        get_browser($userstring);
+        $_SESSION['mobile'] = // get user agent string and compare it to somestuff.
+        */
+        // check if it's a
+    }
+
+
+
+    /*
+     * Ends the session for the user.
+     */
+    function endSession() {
+        $_SESSION['loggedin'] = False;
+        echo
+    }
+
 
 ?>
