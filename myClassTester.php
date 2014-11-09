@@ -1,6 +1,6 @@
 <?php
 //Debug Statement
-ini_set('display_errors', 'On');
+//ini_set('display_errors', 'On');
 /**
  * Created by IntelliJ IDEA.
  * User: Elernisto
