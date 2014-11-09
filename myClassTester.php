@@ -8,9 +8,11 @@ ini_set('display_errors', 'On');
  * Time: 3:46 PM
  */
 include "Classes/user.php";
+include "Classes/budget.php";
 
 $user = new user();
-$retVal = $user->registerUser("bla2", "bla2", "elernisto@gmail.com");
+$budget = new budget();
+$retVal = $budget->selectBudget("admin", "daMoney", "2", "50");
 if($retVal == 0)
 {
     echo "Works!";
@@ -19,3 +21,7 @@ else
 {
     echo "Uhoh!";
 }
+
+print_r($budget->listCategories());
+print_r($budget->listBudgetItems());
+var_dump($budget->getData());

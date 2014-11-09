@@ -36,7 +36,7 @@ class budget
     {
         $budgetQueryCheck = array("user" => $user, "budget" => $budget);
         $budgetCursorCheck = $this->budgetCollection->find($budgetQueryCheck);
-        if ($budgetCursorCheck . hasNext()) {
+        if ($budgetCursorCheck->hasNext()) {
             return -1;
         } else {
             $budgetQueryInsert = array("user" => $user, "budget" => $budget, "incomesPerMonth" => $incomesPerMonth,
@@ -147,5 +147,9 @@ class budget
         unset($this->data["budgetItems"][$index]);
         $this->budgetCollection->update(array("name" => $this->data["name"], "budget" => $this->data["budget"]), $this->data);
         $this->selectBudget($this->data["user"], $this->data["budget"]);
+    }
+    function getData()
+    {
+        return $this->data;
     }
 }
