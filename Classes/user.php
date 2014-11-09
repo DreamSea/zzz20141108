@@ -45,4 +45,20 @@ class user {
 
     }
     function getData(){return $this->data;}
+    function registerUser($user, $pass, $email)
+    {
+        $passHash = hash("sha256", $pass);
+        $userQuery = array("user"=>$user);
+        $emailQuery = array("email" => $email);
+        $userCursor = $this->userCollection->find($userQuery);
+        $emailCursor = $this->userCollection->find($emailQuery);
+        if($userCursor->hasNext())
+            return -1;
+        else if($emailCursor->hasNext())
+            return -1;
+        else
+        {
+            $registerQuery = array("user" => $user, "pass" => $passHash, "email"=>$email);
+        }
+    }
 }
