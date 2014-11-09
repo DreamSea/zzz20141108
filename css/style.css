@@ -32,6 +32,20 @@ nav {
 
 section {
     height:100vh;
+    background-color: rgb(210, 163, 81);
+}
+
+.sectionContainer {
+    width: 300px;
+    background-color: rgb(241, 193, 88);
+}
+
+.sectionContainer h2 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
 }
 
 .normalSection {
@@ -44,6 +58,10 @@ section {
     width:200px;
 }
 
+.hoverTable tr:hover {
+    background-color: rgb(119, 180, 210);
+}
+
 table {
     border-spacing: 0;
     -webkit-border-horizontal-spacing:0;
@@ -54,6 +72,17 @@ th {
     padding: 0;
 }
 
-.hoverTable tr:hover {
-    background-color: rgb(119, 180, 210);
+.inputDesc {
+    width:100px;
+}
+
+.formButton {
+    margin-left: auto;
+    margin-right: auto;
+    width:50px;
+    padding: 10px;
+}
+
+.formButton input {
+    width:50px;
 }

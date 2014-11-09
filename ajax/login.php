@@ -7,17 +7,21 @@
 <body>
 
 <div class="normalSection">
-	<div class="container">
-		<div class="main">
-			<form class="form" method="post" action="#">
-				<h2>Login Form</h2>
-				<label>Email :</label>
-				<input type="text" name="email" id="email"><br>
-				<label>Password :</label>
-				<input type="password" name="password" id="password"><br>
-				<input type="button" name="login" id="login" value="Login">
-			</form>
-		</div>
+	<div class="sectionContainer">
+		<form class="form" method="post" action="#">
+			<h2>Login Form</h2><br>
+			<table>
+				<tr>
+					<th class="inputDesc">Email</th>
+					<td><input class = "inputField" type="text" name="email" id="email"></td>
+				</tr>
+				<tr>
+					<th class="inputDesc">Password</th>
+					<td><input class = "inputField" type="password" name="password" id="password"></td>
+				</tr>
+			</table><br>
+			<div class = "formButton"><input type="button" name="login" id="login" value="Login"></div>
+		</form>
 	</div>
 </div>
 	<script
@@ -31,6 +35,7 @@
 				if( email =='' || password ==''){
 					alert("Please fill all fields.");
 				} else {
+					alert("empy email/password check passed");
 					$.post("login.php",{ email1: email, password1:password}, function(data){
 						if(data=='Bad Email') {
 							alert("Bad Email");
