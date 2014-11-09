@@ -28,6 +28,10 @@ local.properties
 .classpath
 .project
 
+#IntelliJ Stuff
+.idea/
+*.iml
+
 # =========================
 # Operating System Files
 # =========================
