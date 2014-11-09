@@ -4,6 +4,6 @@
 	<title>Basic Info</title>
 </head>
 <body>
-	Basic Info
+	Project Details
 </body>
 </html>

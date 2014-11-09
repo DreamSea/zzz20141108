@@ -2,40 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Registration Form</title>
-
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-	$("#register").click(function(){
-	    var username = $("#username").val();
-		var password = $("#password").val();
-		var email = $("#email").val();
-		// Checking for blank fields.
-		if( email =='' || password =='' || username ==''){
-			alert("Please fill all fields.");
-		} else {
-			$.post("registration.php",{ email1: email, password1:password, username1: username}, function(data){
-				if(data=='Username Taken') {
-				    alert("Username Taken");
-				} else if(data=='Bad Email') {
-					alert("Bad Email");
-				} else if (data=='Success'){
-					$("form")[0].reset();
-					alert("Success");
-				} else {
-					alert("Not Connected?");
-				}
-			});
-		}
-	});
-});
-$('.secretButton').click(function(){
-	$( "nav" ).load( "ajax/userNav" );
-	$( "section" ).load( "ajax/overview.php" );
-});
-</script>
+	<title>Registration Form</title>
 </head>
 <body>
 	<div class="divLogin">
@@ -52,6 +19,41 @@ $('.secretButton').click(function(){
 			</form>
 		</div>
 	</div>
+	<br>
 	<a class="secretButton">Fake Login</a>
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#register").click(function(){
+				var username = $("#username").val();
+				var password = $("#password").val();
+				var email = $("#email").val();
+				// Checking for blank fields.
+				if( email =='' || password =='' || username ==''){
+					alert("Please fill all fields.");
+				} else {
+					$.post("registration.php",{ email1: email, password1:password, username1: username}, function(data){
+						if(data=='Username Taken') {
+							alert("Username Taken");
+						} else if(data=='Bad Email') {
+							alert("Bad Email");
+						} else if (data=='Success'){
+							$("form")[0].reset();
+							alert("Success");
+						} else {
+							alert("Not Connected?");
+						}
+					});
+				}
+			});
+		});
+		$('.secretButton').click(function(){
+			$( "nav" ).load( "ajax/userNav.php" );
+			$( "section" ).load( "ajax/overview.php" );
+		});
+
+	</script>
 </body>
 </html>

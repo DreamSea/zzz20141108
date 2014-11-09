@@ -4,39 +4,41 @@
 	<title>User Navigation</title>
 </head>
 <body>
-	Username: <label id="user"></label><br>
+	Username: <br>
+	<label id="user"></label><br><br>
 	<a class="overviewButton">Overview</a><br>
 	<a class="addDataButton">Add Data</a><br>
 	<a class="loanButton">Loan Calculator</a><br>
 	<a class="logoutButton">Logout</a><br>
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+
+		var username = "username placeholder";
+		$("#user").text(username);
+		$('.overviewButton').click(function(){
+			$( "section").load( "ajax/overview.php");
+		});
+
+		$('.addDataButton').click(function(){
+			$( "section" ).load( "ajax/addData.php");
+		});
+
+		$('.loanButton').click(function(){
+			alert("loan load() placeholder");
+		});
+
+		$('.logoutButton').click(function(){
+			$( "section" ).load( "ajax/guestInfo.php");
+			$( "nav").load( "ajax/guestNav.php");
+			alert("Logged Out");
+		});
+
+		// Hover shim for Internet Explorer 6 and Internet Explorer 7.
+		$(document.body).on('hover','a',function(){
+			$(this).toggleClass('hover');
+		});
+	</script>
 </body>
-
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-
-	var username = "username placeholder";
-	$("#user").text(username);
-	$('.overviewButton').click(function(){
-		alert("overview load() placeholder");
-	});
-
-	$('.addDataButton').click(function(){
-		alert("addData load() placeholder");
-	});
-
-	$('.loanButton').click(function(){
-		alert("loan load() placeholder");
-	});
-	
-	$('.logoutButton').click(function(){
-		alert("logout load() placeholder");
-	});
-
-	// Hover shim for Internet Explorer 6 and Internet Explorer 7.
-	$(document.body).on('hover','a',function(){
-	    $(this).toggleClass('hover');
-	});
-</script>
-
 </html>
