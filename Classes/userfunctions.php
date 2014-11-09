@@ -14,7 +14,7 @@ session_start();
 
 // Does not automatically log the user in. It only keeps track of if the user
 // is currently logged in.
-session_set_cooki_params(0);
+session_set_cookie_params(0);
 if(!isset($_SESSION['loggedin'])) {
     $_SESSION['loggedin'] = False;
     $_SESSION['mobile'] = False;
@@ -59,7 +59,7 @@ if(!isset($_SESSION['loggedin'])) {
         }
 
         registerUser($enteredName,$enteredPass,$enteredMail);
-        loadSession();
+        loadSession($enteredName);
         return True;
     }
 

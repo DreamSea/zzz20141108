@@ -58,4 +58,11 @@ include "budget.php";
 
         return newCategory($enteredCategory, $enteredPercent,$enteredColor);
     }
+
+    function searchBudget() {
+        $enteredCategory = $_POST("category");
+        $startDate = $_POST("startDate");
+        $endDate = $_POST("endDate");
+
+    }
 ?>

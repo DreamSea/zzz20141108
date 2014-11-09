@@ -8,7 +8,7 @@
 
 <div class="normalSection">
 	<div class="sectionContainer">
-		<form class="form" method="post" action="#">
+		<form class="form" method="post" action="../Controllers/registrationAction.php">
 			<h2>Registration Form</h2><br>
 			<table>
 				<tr>

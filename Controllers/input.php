@@ -31,12 +31,14 @@ include("../Classes/budget.php");
       // budget get, needs to be implemented in model.
       // Select this budget
       selectBudget($_SESSION['currentuser']);
+      $categories = listBudgetItems();
+      $count = count($categories);
       // calculate what free percentage it will be.
       $freepercent = 1 - countCategoryPercentages();
-      // Need a way to get a specific category.
-      // for each category:
-      //    data_transform($percentage, $color, $category);
-      //
+      for($i = 0; $i < $count; $i++) {
+          // data_transform($currentValue,$currentColor,$currentLabel);
+      }
+
 
   }
   /*
