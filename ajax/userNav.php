@@ -8,7 +8,7 @@
 	<label id="user"></label><br><br>
 
 	<table class="hoverTable">
-		<tr id="trOverview"><th>Overview</th></tr>
+		<tr id="trOverview"><th>Dashboard</th></tr>
 		<tr id="trSearch"><th>Search</th></tr>
 		<tr id="trAdd"><th>Add Data</th></tr>
 		<tr id="trLoan"><th>Loan Calculator</th></tr>

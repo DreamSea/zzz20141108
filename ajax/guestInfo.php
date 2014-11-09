@@ -97,7 +97,35 @@
 		}
 
 		#finanQuote {
-			font-size: 80%;
+			position: absolute;
+			right: 80%;
+			font-size: 50%;
+			width: 400px;
+		}
+
+		.titleRegister {
+			position: absolute;
+			right: 300%;
+			top: 200%;
+			padding: 0;
+			width: 150px;
+		}
+		.titleRegister2 {
+			z-index: 5;
+			position: absolute;
+			right: 50%;
+			bottom: 20%;
+			padding: 0;
+			width: 150px;
+		}
+		.tReg {
+			width: 150px;
+			padding: 3px;
+			margin: 5px;
+		}
+		.tRegB {
+			width: 100px;
+			padding: 3px;
 		}
 
 
@@ -108,6 +136,8 @@
 		}
 		#group1 .parallax__layer--base {
 			background: rgb(210, 163, 81);
+			height: 90vh;
+			padding: 0;
 		}
 
 		#group2 {
@@ -159,7 +189,22 @@
 	<div class="parallax">
 		<div id="group1" class="parallax__group">
 			<div class="parallax__layer parallax__layer--base">
-				<div class="parallax__title" id="finanQuote">'financial literacy is an essential skill for financial decision-making and wellbeing over the life cycle.'
+				<div class="parallax__title"> </div>
+				<div class="parallax__title">
+					<div id="finanQuote">'financial literacy is an essential skill for financial decision-making and wellbeing over the life cycle.'</div>
+					<br>
+					<div class="titleRegister">
+						<table>
+							<tr>
+								<td>
+									<input class = "tReg" type="text" name="tReg" id="tReg0" value="Username">
+								</td>
+								<td>
+									<input class = "tRegB" type="button" name="tBut" id="tBut0" value="To Registration">
+								</td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -231,6 +276,18 @@
 		<div id="group7" class="parallax__group">
 			<div class="parallax__layer parallax__layer--base">
 				<div class="parallax__title" id="bigPi">π</div>
+			</div><br>
+			<div class="titleRegister2">
+				<table>
+					<tr>
+						<td>
+							<input class = "tReg" type="text" name="tReg2" id="tReg2" value="Username">
+						</td>
+						<td>
+							<input class = "tRegB" type="button" name="tBut2" id="tBut2" value="To Registration">
+						</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</div>
